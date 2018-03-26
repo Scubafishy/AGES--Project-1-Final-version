@@ -59,11 +59,10 @@ public class SubmarineGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // GameRunning();
+        GameRunning();
         OnScreenScore();
 
-        GameTimer -= Time.deltaTime;
-        timeText.text = GameTimer.ToString("f0");
+        
     }
 
     private IEnumerator GameisRunning()
@@ -96,11 +95,11 @@ public class SubmarineGameManager : MonoBehaviour
     {
         ScoreGet();
     }
-    //private void GameRunning()
-    //{
-    //    GameTimer -= Time.deltaTime;
-    //    timeText.text = GameTimer.ToString("f0");
-    //}
+    private void GameRunning()
+    {
+        GameTimer -= Time.deltaTime;
+        timeText.text = GameTimer.ToString("f0");
+    }
     private void ScoreGet( )
     {
         if(OneScored == true)
